@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "node builder/build.js",
+    "dev": "node builder/build.js --dev"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.38",
+    "sass": "^1.51.0"
+  }
+}

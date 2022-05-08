@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de la Vie</title>
+
+    <link rel="stylesheet" href="./assets/styles/main.css">
+
+    <script src="./assets/scripts/app.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <h3 class="header_title">Jeu de la Vie</h3>
+    </header>
+    <main>
+        <div class="main_header">
+            <div id="play-btn" class="btn">
+                <div class="btn_icon">
+                    <img src="./assets/images/icons/play.svg" alt="">
+                </div>
+                <p class="btn_text">Start</p>
+            </div>
+
+            <div id="next-btn" class="btn-secondary">
+                <div class="btn_icon">
+                    <img src="./assets/images/icons/arrow-right_alt.svg" alt="">
+                </div>
+                <p class="btn_text">suivant</p>
+            </div>
+
+            <div id="options-btn" class="btn-icon">
+                <img src="./assets/images/icons/options.svg" alt="">
+            </div>
+            <div id="options-container" class="options-container hide">
+                <p>
+                    <b>Enter</b> :  play / pause<br>
+                    <b>Click</b> :  ajoute des cellules<br>
+                    <b>Click</b> + <b>CTRL</b> :  détruit les cellules<br>
+                    <b>Echap</b> :  debug mode
+                </p>
+            </div>
+        </div>
+        <div class="main_container">
+            <canvas id="canvas"></canvas>
+        </div>
+    </main>
+</body>
+</html>

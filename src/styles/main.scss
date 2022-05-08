@@ -1,0 +1,209 @@
+// FONT //
+@import './generals/_fonts.scss';
+@import './generals/_variables.scss';
+
+
+// GENERAL //
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+}
+
+html {
+    font-family: "Poppins";
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: $content-primary;
+
+    background-color: $background-primary;
+
+    scroll-behavior: smooth;
+}
+
+a {
+    color: $content-primary;
+
+    transition: color .2s;
+
+    &:hover {
+        color: $content-secondary;
+    }
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 6rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: $content-secondary;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+}
+
+@mixin btn() {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    cursor: pointer;
+    user-select: none;
+    border-radius: 3rem;
+
+    font-weight: 700;
+}
+
+.btn {
+    @include btn();
+
+    padding: 0.25rem 1rem;
+
+    color: $background-primary;
+    background-color: $content-primary;
+
+    &-secondary {
+        @include btn();
+
+        padding: 0.125rem 1rem;
+
+        border: 0.125rem solid $content-primary;
+    }
+
+    &_icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: 0.25rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+}
+
+.btn-icon {
+    @include btn();
+
+    padding: 0.5rem;
+
+    color: $background-primary;
+    background-color: $content-primary;
+
+    img {
+        width: 1rem;
+        height: 1rem;
+        display: block;
+    }
+}
+
+// CONTENT //
+header {
+    padding: 0.5rem 1rem;
+    display: grid;
+    justify-content: flex-start;
+
+    border-radius: 3rem;
+
+    background-color: $background-alt;
+}
+
+.header {
+    &_title {
+        color: $content-alt;
+        font-weight: 700;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 0.5rem;
+}
+
+.main {
+    &_header {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            'play next options';
+
+        z-index: 10;
+    }
+
+    &_container {
+        position: relative;
+    }
+}
+
+#play-btn {
+    grid-area: play;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+#next-btn {
+    grid-area: next;
+    justify-self: center;
+    align-self: flex-start;
+}
+
+#options-btn {
+    grid-area: options;
+    justify-self: flex-end;
+    align-self: flex-start;
+}
+
+.options-container {
+    position: absolute;
+    top: 100%;
+
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 1rem;
+
+    z-index: 2;
+
+    border-radius: $border-radius;
+
+    border: 0.125rem solid $background-alt;
+    background-color: $background-primary;
+}
+
+// Canvas
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: $background-secondary;
+    box-shadow: 0px 0px 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+
+.hide {
+    display: none;
+}
