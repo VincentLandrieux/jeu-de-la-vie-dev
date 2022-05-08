@@ -10,6 +10,7 @@ import {
 //---VARIABLE---//
 // ASSETS //
 const assetUrl = `${location.pathname.split("/").slice(1, -1).join("/")}/assets`;
+console.log(assetUrl);
 const optionsSvg = `${assetUrl}/images/icons/options.svg`;
 const deleteSvg = `${assetUrl}/images/icons/delete.svg`;
 

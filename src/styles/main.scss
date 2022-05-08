@@ -119,16 +119,24 @@ h3 {
 
 // CONTENT //
 header {
-    padding: 0.5rem 1rem;
-    display: grid;
-    justify-content: flex-start;
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
 
-    border-radius: 3rem;
+    border-radius: 4rem;
 
     background-color: $background-alt;
 }
 
 .header {
+    &_logo {
+        width: 2.25rem;
+        height: 2.25rem;
+
+        border-radius: 0.25rem;
+    }
+
     &_title {
         color: $content-alt;
         font-weight: 700;
